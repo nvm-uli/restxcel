@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invim.Restxcel", "Invim.Restxcel\Invim.Restxcel.csproj", "{33BFF96F-DB6A-4DF8-8D1B-9D278899A2E2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{33BFF96F-DB6A-4DF8-8D1B-9D278899A2E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33BFF96F-DB6A-4DF8-8D1B-9D278899A2E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33BFF96F-DB6A-4DF8-8D1B-9D278899A2E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33BFF96F-DB6A-4DF8-8D1B-9D278899A2E2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7E8AAD6E-A46E-4A8C-9D23-0E313FF281D0}
+	EndGlobalSection
+EndGlobal

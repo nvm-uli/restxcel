@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Invim.Restxcel</name>
+    </assembly>
+    <members>
+        <member name="M:Invim.Restxcel.Controllers.RestxcelController.UploadTemplate(System.Boolean)">
+            <summary>
+            Uploads a xltx file (Excel template file) as a template for later use.
+            </summary>
+            <param name="permanent">Whether or not to store the template primary on the file system. If not, the template will only persist in the memory of the server.</param>
+            <returns>Information about the created template including templateId, which is requred to use the template in a new document.</returns>
+            <response code="200">Returns document as a byte stream</response>
+            <response code="400">Processing failed with an error. Errors are send as application/json object with the error message displayed in the "error" member</response> 
+        </member>
+        <member name="M:Invim.Restxcel.Controllers.RestxcelController.NewDocument(System.String)">
+            <summary>
+            Creates a new Excel workbook. The workbook will remain in server cache until it is downloaded using the "Download" operation.
+            </summary>
+            <param name="templateId">Id of a previously uploaded template (see UploadTemplate).</param>
+            <returns>Information about the created document including documentId, which is required for later use. If a template was used which contained one or more worksheets, the worksheetIds are returned for later use.</returns>
+            <response code="200">Returns document as a byte stream</response>
+            <response code="400">Processing failed with an error. Errors are send as application/json object with the error message displayed in the "error" member</response> 
+        </member>
+        <member name="M:Invim.Restxcel.Controllers.RestxcelController.NewWorksheet(System.String,System.String)">
+            <summary>
+            Creates a new worksheet in the document with the given id.
+            </summary>
+            <param name="documentId">Id of the document</param>
+            <param name="name">Name of the new worksheet</param>
+            <returns>Information about the created worksheet including worksheetId, which is required for later use.</returns>
+            <response code="200">Returns document as a byte stream</response>
+            <response code="400">Processing failed with an error. Errors are send as application/json object with the error message displayed in the "error" member</response> 
+        </member>
+        <member name="M:Invim.Restxcel.Controllers.RestxcelController.GetCell(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Returns information about the values and formatting rules for a specific cell in the document.
+            </summary>
+            <param name="documentId">Id of the document</param>
+            <param name="worksheetId">Id of the workbook</param>
+            <param name="col">Col number (starting with 1 [A])</param>
+            <param name="row">Row number (starting with 1)</param>
+            <returns>Information about the cell</returns>
+            <response code="200">Returns document as a byte stream</response>
+            <response code="400">Processing failed with an error. Errors are send as application/json object with the error message displayed in the "error" member</response> 
+        </member>
+        <member name="M:Invim.Restxcel.Controllers.RestxcelController.GetCell(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Returns information about the values and formatting rules for a range of cells in the document
+            </summary>
+            <param name="documentId">Id of the document</param>
+            <param name="worksheetId">Id of the workbook</param>
+            <param name="fromCol">First col number</param>
+            <param name="toCol">Last col number</param>
+            <param name="fromRow">First row number</param>
+            <param name="toRow">Last row number</param>
+            <returns>Information about the cell</returns>
+            <response code="200">Returns document as a byte stream</response>
+            <response code="400">Processing failed with an error. Errors are send as application/json object with the error message displayed in the "error" member</response> 
+        </member>
+        <member name="M:Invim.Restxcel.Controllers.RestxcelController.SetCellValue(System.String,System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            Simple GET call to apply a value into a specific cell. Use "POST SetCell" for more advanced use
+            </summary>
+            <param name="documentId">Id of the document</param>
+            <param name="worksheetId">Id of the workbook</param>
+            <param name="col">Col number (starting with 1 [A])</param>
+            <param name="row">Row number (starting with 1)</param>
+            <param name="value">The value to be set</param>
+            <response code="200">Returns document as a byte stream</response>
+            <response code="400">Processing failed with an error. Errors are send as application/json object with the error message displayed in the "error" member</response> 
+        </member>
+        <member name="M:Invim.Restxcel.Controllers.RestxcelController.SetCell(System.String,System.String,Invim.Restxcel.Models.RestxcelCell)">
+            <summary>
+            Apply a value and formatting rules to a specific cell.
+            </summary>
+            <param name="documentId">Id of the document</param>
+            <param name="worksheetId">Id of the workbook</param>
+            <response code="200">Returns document as a byte stream</response>
+            <response code="400">Processing failed with an error. Errors are send as application/json object with the error message displayed in the "error" member</response> 
+        </member>
+        <member name="M:Invim.Restxcel.Controllers.RestxcelController.SetCellRange(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,Invim.Restxcel.Models.RestxcelCell)">
+            <summary>
+            Apply values and formatting rules to a range of cells. This will apply the provided data to all cells within the range. Use BulkSetCell if you want individual rules and values for the cells.
+            </summary>
+            <param name="documentId">Id of the document</param>
+            <param name="worksheetId">Id of the workbook</param>
+            <param name="fromCol">First col number</param>
+            <param name="toCol">Last col number</param>
+            <param name="fromRow">First row number</param>
+            <param name="toRow">Last row number</param>
+            <response code="200">Returns document as a byte stream</response>
+            <response code="400">Processing failed with an error. Errors are send as application/json object with the error message displayed in the "error" member</response> 
+        </member>
+        <member name="M:Invim.Restxcel.Controllers.RestxcelController.BulkSetCell(System.String,System.String,System.Collections.Generic.IEnumerable{Invim.Restxcel.Models.RestxcelCell})">
+            <summary>
+            Apply values and formatting rules to a bulk of cells.
+            </summary>
+            <param name="documentId">Id of the document</param>
+            <param name="worksheetId">Id of the workbook</param>
+            <response code="200">Returns document as a byte stream</response>
+            <response code="400">Processing failed with an error. Errors are send as application/json object with the error message displayed in the "error" member</response> 
+        </member>
+        <member name="M:Invim.Restxcel.Controllers.RestxcelController.Download(System.String,System.String)">
+            <summary>
+            Downloads a document.
+            </summary>
+            <param name="documentId">Id of the document</param>
+            <param name="fileName">The desired file name including the file extension (.xlsx recommended). Default value: Document.xlsx</param>
+            <returns>Byte stream with content type "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"</returns>
+            <response code="200">Returns document as a byte stream</response>
+            <response code="400">Processing failed with an error. Errors are send as application/json object with the error message displayed in the "error" member</response> 
+        </member>
+    </members>
+</doc>

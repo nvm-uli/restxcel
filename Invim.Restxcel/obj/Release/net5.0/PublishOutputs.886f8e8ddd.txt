@@ -1,0 +1,15 @@
+C:\Repos\Invim.Restxcel\Invim.Restxcel\obj\Release\net5.0\PubTmp\Out\Invim.Restxcel.exe
+C:\Repos\Invim.Restxcel\Invim.Restxcel\obj\Release\net5.0\PubTmp\Out\appsettings.Development.json
+C:\Repos\Invim.Restxcel\Invim.Restxcel\obj\Release\net5.0\PubTmp\Out\appsettings.json
+C:\Repos\Invim.Restxcel\Invim.Restxcel\obj\Release\net5.0\PubTmp\Out\Invim.Restxcel.dll
+C:\Repos\Invim.Restxcel\Invim.Restxcel\obj\Release\net5.0\PubTmp\Out\Invim.Restxcel.deps.json
+C:\Repos\Invim.Restxcel\Invim.Restxcel\obj\Release\net5.0\PubTmp\Out\Invim.Restxcel.runtimeconfig.json
+C:\Repos\Invim.Restxcel\Invim.Restxcel\obj\Release\net5.0\PubTmp\Out\Invim.Restxcel.pdb
+C:\Repos\Invim.Restxcel\Invim.Restxcel\obj\Release\net5.0\PubTmp\Out\EPPlusFree.dll
+C:\Repos\Invim.Restxcel\Invim.Restxcel\obj\Release\net5.0\PubTmp\Out\Microsoft.OpenApi.dll
+C:\Repos\Invim.Restxcel\Invim.Restxcel\obj\Release\net5.0\PubTmp\Out\Newtonsoft.Json.dll
+C:\Repos\Invim.Restxcel\Invim.Restxcel\obj\Release\net5.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
+C:\Repos\Invim.Restxcel\Invim.Restxcel\obj\Release\net5.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Repos\Invim.Restxcel\Invim.Restxcel\obj\Release\net5.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Repos\Invim.Restxcel\Invim.Restxcel\obj\Release\net5.0\PubTmp\Out\System.Xml.XPath.XmlDocument.dll
+C:\Repos\Invim.Restxcel\Invim.Restxcel\obj\Release\net5.0\PubTmp\Out\Invim.Restxcel.xml
